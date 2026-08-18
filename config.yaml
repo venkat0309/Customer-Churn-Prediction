@@ -1,0 +1,75 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Customer Churn Prediction – Project Configuration
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Paths ──────────────────────────────────────────────────────────────────
+DATA_DIR: "data"
+RAW_DATA_PATH: "data/raw/telecom_churn.csv"
+PROCESSED_DATA_PATH: "data/processed/churn_processed.csv"
+MODELS_DIR: "models"
+REPORTS_DIR: "reports"
+FIGURES_DIR: "reports/figures"
+
+# ── Data Generation ────────────────────────────────────────────────────────
+N_SAMPLES: 10000
+RANDOM_STATE: 42
+CHURN_RATE: 0.265          # ~26.5 % churn – realistic telecom benchmark
+
+# ── Feature Engineering ────────────────────────────────────────────────────
+CATEGORICAL_FEATURES:
+  - "gender"
+  - "partner"
+  - "dependents"
+  - "phone_service"
+  - "multiple_lines"
+  - "internet_service"
+  - "online_security"
+  - "online_backup"
+  - "device_protection"
+  - "tech_support"
+  - "streaming_tv"
+  - "streaming_movies"
+  - "contract"
+  - "paperless_billing"
+  - "payment_method"
+
+NUMERICAL_FEATURES:
+  - "tenure"
+  - "monthly_charges"
+  - "total_charges"
+  - "num_products"
+  - "support_calls"
+  - "avg_monthly_gb_download"
+
+TARGET_COLUMN: "churn"
+
+# ── Train / Test Split ─────────────────────────────────────────────────────
+TEST_SIZE: 0.20
+VALIDATION_SIZE: 0.10       # fraction of training set used for validation
+
+# ── Model Hyperparameters ──────────────────────────────────────────────────
+RANDOM_FOREST:
+  n_estimators: 300
+  max_depth: 12
+  min_samples_split: 5
+  min_samples_leaf: 2
+  max_features: "sqrt"
+  class_weight: "balanced"
+  n_jobs: -1
+  random_state: 42
+
+XGBOOST:
+  n_estimators: 400
+  max_depth: 6
+  learning_rate: 0.05
+  subsample: 0.8
+  colsample_bytree: 0.8
+  scale_pos_weight: 2.8     # handles class imbalance
+  eval_metric: "auc"
+  use_label_encoder: false
+  random_state: 42
+
+# ── Thresholds & Metrics ───────────────────────────────────────────────────
+CLASSIFICATION_THRESHOLD: 0.40   # tuned for higher recall on churn class
+TARGET_ACCURACY: 0.86
+TARGET_AUC: 0.92

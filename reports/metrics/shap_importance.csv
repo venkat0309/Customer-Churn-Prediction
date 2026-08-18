@@ -1,0 +1,21 @@
+feature,mean_shap
+contract_risk,1.8056941
+monthly_charges,1.4821904
+internet_service_Fiber optic,0.7266254
+payment_method_Electronic check,0.6454706
+paperless_billing_Yes,0.4928285
+tech_support_Yes,0.31692684
+avg_monthly_gb_download,0.31583405
+charges_per_product,0.31560236
+support_call_rate,0.246946
+support_calls,0.2319189
+senior_citizen,0.22102538
+tenure,0.21613458
+contract_Two year,0.19335365
+total_charges,0.17577055
+is_fiber_no_security,0.16338971
+lifetime_value_proxy,0.15446219
+contract_One year,0.13247511
+online_security_Yes,0.13109356
+partner_Yes,0.116693325
+num_products,0.087537155
