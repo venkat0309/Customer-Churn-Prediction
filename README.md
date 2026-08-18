@@ -352,9 +352,9 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## 👤 Author
 
-**Your Name**  
-📧 your.email@example.com  
-🔗 [LinkedIn](https://linkedin.com/in/yourprofile) · [GitHub](https://github.com/yourusername)
+**Venkat Pasalapudi**  
+📧 pasalapudi.dev@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/pasalapudi-venkat/) · [GitHub](https://github.com/venkat0309)
 
 ---
 
